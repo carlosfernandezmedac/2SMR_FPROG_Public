@@ -30,33 +30,6 @@ error — y que sepa la solución del *casting* (lo veremos a fondo en el Tema 4
 
 ---
 
-## Caso práctico 2: "Factura con IVA, bien alineada"
-
-Se pide un programa que calcule el total de una factura aplicando un 21% de IVA, con
-el resultado alineado a dos decimales.
-
-```java
-double baseImponible = 150.0;
-double iva = baseImponible * 0.21;
-double total = baseImponible + iva;
-
-System.out.print("Base imponible: " + baseImponible);
-System.out.println("IVA (21%): " + iva);
-System.out.println("Total: " + total);
-```
-
-<details>
-<summary>✅ Solución (para corrección)</summary>
-
-Salida:
-```
-Base imponible:   150,00 €
-IVA (21%):         31,50 €
-Total:            181,50 €
-```
-
-</details>
-
 
 ## Caso práctico 2: "Factura con IVA, bien alineada"
 
@@ -85,6 +58,7 @@ Total:            181,50 €
 
 </details>
 
+---
 
 ## Caso práctico 3: "Operadores en un lenguaje de programación
 
