@@ -1,15 +1,14 @@
 # Tema 2 — Variables y operadores
 
-RA1 (CE d, e, f, g)
-
 ## Índice
 1. [Variables: cajas con nombre](#1-variables-cajas-con-nombre)
-2. [Tipos de datos básicos](#2-tipos-de-datos-básicos)
-3. [Operadores aritméticos](#3-operadores-aritméticos)
-4. [Operadores de comparación](#4-operadores-de-comparación)
-5. [Comparar texto: `equals()`, no `==`](#5-comparar-texto-equals-no-)
-6. [Errores típicos](#6-errores-típicos)
-
+2. [Nombres de variables](#2-nombres-de-variables)
+3. [Tipos de datos básicos](#3-tipos-de-datos-básicos)
+4. [Operadores aritméticos](#4-operadores-aritméticos)
+5. [Operadores de comparación](#5-operadores-de-comparación)
+6. [Precedencia: qué se calcula primero](#6-precedencia-qué-se-calcula-primero)
+7. [Comparar texto: `equals()`, no `==`](#7-comparar-texto-equals-no-)
+8. [Errores típicos](#8-errores-típicos)
 ---
 
 ## 1. Variables: cajas con nombre
@@ -30,7 +29,24 @@ int cursoActual = 2;   // declaración + asignación en una línea
 
 ---
 
-## 2. Tipos de datos básicos
+## 2. Nombres de variables
+
+| Nombre | ¿Válido? | Por qué |
+|---|---|---|
+| `edad` | ✅ | Claro y en minúscula |
+| `nombreCompleto` | ✅ | Varias palabras: la segunda empieza en mayúscula |
+| `precio2` | ✅ | Puede llevar números, pero no empezar por uno |
+| `2precio` | ❌ | No puede empezar por un número |
+| `mi edad` | ❌ | No puede tener espacios |
+| `precio-total` | ❌ | No puede llevar guiones |
+| `class` | ❌ | Es una palabra reservada de Java |
+
+Java distingue mayúsculas: `edad` y `Edad` son dos variables distintas.
+
+---
+
+
+## 3. Tipos de datos básicos
 
 | Tipo | Guarda | Ejemplos |
 |---|---|---|
@@ -51,12 +67,12 @@ String nombre = "Juan";
 > ⚠️ `char` va con comillas **simples** y un solo carácter. `String` va con comillas
 > **dobles** y puede tener cualquier longitud.
 
-De momento vamos a trabajar con valores **fijos**, escritos directamente en el código.
+De momento vamos a trabajar con valores **fijos**, escritos directamente en el código. A esos valores (18, 9.99, 'A', "Juan", true) se les llama **literales**.
 Pedirlos por teclado lo vemos en el Tema 3, con `Scanner`.
 
 ---
 
-## 3. Operadores aritméticos
+## 4. Operadores aritméticos
 
 | `+` | `-` | `*` | `/` | `%` |
 |---|---|---|---|---|
@@ -87,7 +103,7 @@ System.out.println("Me llamo " + nombre + " y tengo " + edad + " años");
 
 ---
 
-## 4. Operadores de comparación
+## 5. Operadores de comparación
 
 El resultado siempre es `boolean` (`true`/`false`):
 
@@ -101,9 +117,27 @@ System.out.println(a > b);    // true
 System.out.println(a == b);   // false
 ```
 
+> Existen también los operadores **lógicos** (`&&`, `||`, `!`) y los de **incremento**
+> (`++`, `+=`). Los veremos con el `if` y los bucles.
+
 ---
 
-## 5. Comparar texto: `equals()`, no `==`
+## 6. Precedencia: qué se calcula primero
+
+Igual que en matemáticas: primero `*`, `/`, `%` y después `+`, `-`. Los **paréntesis**
+mandan sobre todo, y a igual prioridad se va de izquierda a derecha.
+
+```java
+System.out.println(2 + 3 * 4);     // 14  (primero 3 * 4)
+System.out.println((2 + 3) * 4);   // 20  (primero el paréntesis)
+System.out.println(10 - 4 - 3);    // 3   (de izquierda a derecha: (10 - 4) - 3)
+```
+
+> 💡 Ante la duda, usa paréntesis.
+
+---
+
+## 7. Comparar texto: `equals()`, no `==`
 
 ```java
 String a = "Hola";
@@ -119,7 +153,7 @@ System.out.println(a.equals("hola"));   // false — distingue mayúsculas/minú
 
 ---
 
-## 6. Errores típicos
+## 8. Errores típicos
 
 | Error | Causa |
 |---|---|
@@ -127,6 +161,6 @@ System.out.println(a.equals("hola"));   // false — distingue mayúsculas/minú
 | `incompatible types: possible lossy conversion` | Metes un `double` en una variable `int` sin conversión (Tema 4) |
 | `7 / 2` da `3` en vez de `3.5` | División entre dos `int` — no es un error, es cómo funciona |
 
----
 
-Casos prácticos y ejercicios: [`casos-practicos.md`](casos-practicos.md) · [`ejercicios.md`](ejercicios.md)
+
+

@@ -20,11 +20,16 @@ Para obtener el resultado decimal, hay que forzar a que al menos uno de los dos 
 `double`, con un *casting*:
 
 ```java
-System.out.println((double) a / b);   // 3.5
+double a = 7;
+int b = 2;
+System.out.println(a / b);   // 3.5
 ```
 
-**Puntos a valorar:** que entienda que es un comportamiento del tipo de dato, no un
-error — y que sepa la solución del *casting* (lo veremos a fondo en el Tema 4).
+Otra forma es el casting, (double) a / b, que convierte el valor sin cambiar la variable
+
+```java
+System.out.println((double) a / b);   // 3.5
+```
 
 </details>
 
@@ -62,4 +67,16 @@ Total:            181,50 €
 
 ## Caso práctico 3: "Operadores en un lenguaje de programación
 
+Crea un archivo Main.java y compila el código del vídeo:
+
 https://vimeo.com/846296102/9bc2cc29b8?share=copy
+
+Antes de ejecutarlo, apunta en un papel qué crees que mostrará cada línea.
+Ejecútalo y compara tus resultados con la salida real.
+
+Responde:
+- ¿Por qué resultadoDivision vale 0 y no 0.5?
+- ¿Por qué esCorrecto acaba valiendo true?
+
+Reto: cambia los valores de miEntero1 y miEntero2 y vuelve a predecir antes de ejecutar. ¿Qué valores harían que esCorrecto fuera false?
+
