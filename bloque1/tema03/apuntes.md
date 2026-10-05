@@ -186,11 +186,9 @@ double precio = sc.nextDouble();
 System.out.println("Con IVA: " + (precio * (1 + IVA)));   // con 100 -> 121.0
 ```
 
-> 💡 Java ya trae una constante para π: `Math.PI`. Úsala cuando no quieras definir la tuya.
-
 ---
 
-## 7. Errores típicos
+## 6. Errores típicos
 
 | Error | Causa |
 |---|---|
