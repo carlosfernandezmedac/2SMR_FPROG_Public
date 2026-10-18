@@ -174,10 +174,13 @@ Si intentas cambiarla, el programa no compila:
 PI = 3;   // ❌ error: cannot assign a value to final variable PI
 ```
 
-**¿Por qué una constante y no escribir el número cada vez?** Si el IVA cambia, con una
-constante lo cambias en **un solo sitio**. Con el `0.21` repetido por todo el código
-tendrías que buscarlos todos, y un "buscar y reemplazar" podría cambiar otro `0.21` que
-no era el IVA.
+**¿Para qué sirve `final`?** Un valor que no debe cambiar nunca (el IVA, π, los
+segundos de un minuto) se declara con `final`. Si más adelante alguien intenta
+modificarlo, el compilador da error en vez de dejar que el programa calcule mal.
+Además, el nombre en mayúsculas avisa de que es una constante.
+
+> 💡 Es mejor guardar el valor en una constante (o variable) **una sola vez** que
+> escribir `0.21` repetido por todo el código. Si cambia, lo cambias en un único sitio.
 
 ```java
 final double IVA = 0.21;
