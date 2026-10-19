@@ -1,7 +1,5 @@
 # Tema 4 — Conversión de tipos y operadores lógicos
 
-RA1 (CE h, e)
-
 ## Índice
 1. [Conversión implícita](#1-conversión-implícita)
 2. [Conversión explícita (casting)](#2-conversión-explícita-casting)
