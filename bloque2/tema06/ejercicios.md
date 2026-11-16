@@ -27,7 +27,27 @@ Pide el importe y dos preguntas (`s`/`n`): ¿eres socio? (−5 %) ¿pagas en efe
 
 ---
 
+## Ejercicio 4.1 -  Descuentos acumulables
+
+```java
+if (socio == 's') {
+    descuento += 5;
+} else if (efectivo == 's') {
+    descuento += 2;
+}
+```
+
+Explica la diferencoia con el código anterior. Si es socio y tiene efectivo cuanto descuento se le aplica?
+
+---
+
+## Ejercicio 4.2 -  Descuentos acumulables
+Pide si el cliente es socio (s/n) y si paga en efectivo (s/n): socio y efectivo, 7 %; solo socio, 5 %; no socio pero efectivo, 2 %; ninguno, 0 %. Muestra Descuento total: X%.
+
+---
 
 ## Ejercicio 5 — Tarifa de autobús
 
 Menores de 4 años: gratis. 4–12: 0,50 €. 13–64: 1,20 €. 65 o más: gratis.
+
+
