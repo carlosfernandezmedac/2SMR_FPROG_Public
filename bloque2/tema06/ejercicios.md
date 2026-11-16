@@ -37,7 +37,7 @@ if (socio == 's') {
 }
 ```
 
-Explica la diferencoia con el código anterior. Si es socio y tiene efectivo cuanto descuento se le aplica?
+Explica la diferencia con el código anterior. Si es socio y tiene efectivo, ¿qué descuento se le aplica? ¿Es correcto según el enunciado?
 
 ---
 
